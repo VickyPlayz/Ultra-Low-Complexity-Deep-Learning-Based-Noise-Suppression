@@ -5,6 +5,8 @@ This project implements a **Deep Learning model designed to remove background no
 
 In simple terms: **Input Noisy Audio -> Model -> Output Clean Audio.**
 
+Based on the research paper : Ultra Low Complexity Deep Learning Based Noise Suppression by Shrishti Saha Shetu, Soumitro Chakrabarty, Oliver Thiergart, Edwin Mabande
+https://arxiv.org/pdf/2312.08132
 ## How It Works
 The system uses a **two-stage hybrid approach**:
 1.  **Stage 1 (CRN)**: A Convolutional Recurrent Network looks at the "magnitude" (loudness) of sound frequencies and estimates a mask to filter out noise.
