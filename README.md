@@ -1,16 +1,16 @@
 # Ultra Low Complexity Deep Learning Based Noise Suppression
 
-## 🎯 Project Purpose
+## Project Purpose
 This project implements a **Deep Learning model designed to remove background noise from speech audio**. The goal is to achieve high-quality speech enhancement while keeping the model computationally "lightweight" (low complexity), making it potentially suitable for real-time applications or devices with limited power.
 
 In simple terms: **Input Noisy Audio -> Model -> Output Clean Audio.**
 
-## 🧠 How It Works
+## How It Works
 The system uses a **two-stage hybrid approach**:
 1.  **Stage 1 (CRN)**: A Convolutional Recurrent Network looks at the "magnitude" (loudness) of sound frequencies and estimates a mask to filter out noise.
 2.  **Stage 2 (CNN)**: A Convolutional Neural Network refines the result by correcting the "phase" (timing/alignment) information, which is crucial for crisp audio quality.
 
-## 📂 Project Structure
+## Project Structure
 Here is how the project is organized to help you navigate:
 
 -   **`src/`**: The main source code directory.
@@ -29,7 +29,7 @@ Here is how the project is organized to help you navigate:
 
 -   **`checkpoints/`**: Where the trained model weights (`.pth` files) are saved after every epoch.
 
-## 🚀 How to Use
+## How to Use
 
 ### 1. Training the Model
 To start teaching the model from scratch:
@@ -50,12 +50,12 @@ To see how well the model performs on the test set:
 python -m src.evaluate --model checkpoints/model_epoch_20.pth
 ```
 
-## 📊 Metrics
+## Metrics
 We evaluate the model using **SI-SNR (Scale-Invariant Signal-to-Noise Ratio)**.
 -   **Where to find them**: Run the `src/evaluate.py` script. It prints the average SI-SNR score.
 -   **Current Result**: The model achieves approximately **17.55 dB** SI-SNR on the test set, indicating significant noise reduction.
 
-## 📋 Requirements
+## Requirements
 -   Python 3.8+
 -   PyTorch
 -   SoundFile
