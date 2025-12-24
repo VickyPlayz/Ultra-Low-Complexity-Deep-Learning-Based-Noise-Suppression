@@ -1,0 +1,21 @@
+
+# Data
+data/
+*.wav
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Checkpoints (Optional: Keep final, ignore intermediates if too many)
+checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
